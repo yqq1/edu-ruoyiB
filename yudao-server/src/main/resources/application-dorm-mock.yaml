@@ -1,0 +1,33 @@
+dorm:
+  mock:
+    enabled: false
+    tenants:
+      1:
+        classes:
+          1: 测试班级甲
+          2: 测试班级乙
+        students:
+          1001:
+            student-no: DORM2026001
+            name: 宿舍测试学生甲
+            class-id: 1
+            gender: MALE
+            enrolled: true
+            account-id: 250
+          1002:
+            student-no: DORM2026002
+            name: 宿舍测试学生乙
+            class-id: 2
+            gender: FEMALE
+            enrolled: true
+        actors:
+          104:
+            type: COUNSELOR
+            class-ids: [1, 2]
+          250:
+            type: STUDENT
+            student-id: 1001
+        counselor-accounts:
+          1: [104]
+          2: [104]
+        disciplines-by-student: {}
